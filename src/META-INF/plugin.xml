@@ -1,0 +1,16 @@
+<idea-plugin version="2">
+    <name>Red5 Integration</name>
+    <id>Red5</id>
+    <description>Allows configuring and using Red5 media server directly from IntelliJ IDEA, for deploying and running/debugging rich internet applications.</description>
+    <version>1.0</version>
+    <idea-version since-build="8000"/>
+    <vendor>Carl Sziebert</vendor>
+    <depends>com.intellij.javaee</depends>
+    <resource-bundle>resources.red5plugin</resource-bundle>
+    <category>Application Servers</category>
+    <extensions defaultExtensionNs="com.intellij">
+        <errorHandler implementation="com.intellij.diagnostic.ITNReporter"/>
+        <configurationType implementation="com.googlecode.idea.red5.Red5ConfigurationType"/>
+        <javaee.appServerIntegration implementation="com.googlecode.idea.red5.Red5ServerManager"/>
+    </extensions>
+</idea-plugin>
